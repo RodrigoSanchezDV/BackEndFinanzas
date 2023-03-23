@@ -7,6 +7,10 @@ const controllers = {
 
         res.send(articles)
     },
+    all : async (req,res) => {
+        const articles = await Articles.find()
+        res.send(articles)
+    },
 /*     one: async(req,res)=>{
         const oneProduct = await Product.findOne({price:req.params.price})
         return res.render("../views/detail",{data:oneProduct})

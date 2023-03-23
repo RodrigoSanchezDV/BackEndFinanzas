@@ -2,7 +2,9 @@ import express from "express"
 import productsController from "../controllers/products.js"
 const router = express.Router();
 
+router.get("/categories", productsController.all)
 router.get("/categories/:page",productsController.index);
+
 
 /* router.get("/create",productsController.showCreate);
 

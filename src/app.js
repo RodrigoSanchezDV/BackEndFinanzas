@@ -11,7 +11,7 @@ app.listen({port}, ()=>{
 app.set('view engine', 'ejs');
 
 mongoose.connect(
-    "mongodb://127.0.0.1:27017/economiaPage",
+    "mongodb+srv://bilofacundo:facu2704@cluster0.pfetwya.mongodb.net/?retryWrites=true&w=majority",
     {
         useNewUrlParser:true,
         useUnifiedTopology:true
