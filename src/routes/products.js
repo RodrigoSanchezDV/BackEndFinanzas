@@ -8,6 +8,7 @@ router.get("/categories/:page",productsController.index);
 router.get("/sectors",productsController.sectors);
 router.get("/sections/:sectionName",productsController.section);
 router.get("/article/:articleID",productsController.article);
+
 /* router.get("/create",productsController.showCreate);
 
 router.get("/one/:price",productsController.one);
