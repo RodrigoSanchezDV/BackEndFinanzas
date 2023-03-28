@@ -1,4 +1,5 @@
 import Articles from "../models/articles.js"
+import Sectors from "../models/sectors.js"
 const controllers = {
     index : async (req,res)=>{
         let page = req.params.page;
@@ -9,6 +10,24 @@ const controllers = {
     },
     all : async (req,res) => {
         const articles = await Articles.find()
+        res.send(articles)
+    },
+    sectors : async (req,res) => {
+        const articles = await Sectors.find()
+        res.send(articles)
+    },
+    section : async (req,res) => {
+        let page = req.params.sectionName;
+        const articles = await Articles.find({
+            Sector:page
+        })
+        res.send(articles)
+    },
+    article : async (req,res) => {
+        let page = req.params.articleID;
+        const articles = await Articles.find({
+            _id:page
+        })
         res.send(articles)
     },
 /*     one: async(req,res)=>{
